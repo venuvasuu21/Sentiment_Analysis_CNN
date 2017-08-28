@@ -1,0 +1,29 @@
+data_params:
+ dev_sample_percentage: 0.1
+ ## two languages of the tweets data are available
+ lang: english
+ embed_file_path: "C:\\Users\\vg0174\\Desktop\\Venu\\Research\\GoogleNews-vectors-negative300.bin"
+ x_header: text
+ y_header: label
+ train_path: "data/train.csv"
+ dev_path: "data/dev.csv"
+ test_path: "data/test.csv"
+
+hyper_params:
+ embedding_dim: 300
+ filter_sizes: "3,4,5"
+ num_filters: 128
+ dropout_keep_prob: 0.7
+ l2_reg_lambda: 0.8
+
+train_params:
+ batch_size: 64
+ num_epochs: 20
+ evaluate_every: 10
+ checkpoint_every: 100
+ num_checkpoints: 5
+
+misc_params:
+ allow_soft_placement: True
+ log_device_placement: False
+ random_state: 10
